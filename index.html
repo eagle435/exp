@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        /* for android */
+
+        body{
+            
+            background-repeat: no-repeat;
+      
+            display:flow-root;
+            background-attachment: fixed;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        input{
+            display: none;
+        }
+        
+        
+ 
+        
+        .top-content{
+            background-color: rgb(238, 233, 233);
+            width:100%;
+            margin: 0 auto 20px auto;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            padding-left: 200px;
+            justify-content: space-between;
+    align-items: center;
+padding-top: 5px;
+padding-left: 300px;
+padding-right: 300px;
+
+
+        }
+        .top-content:hover{
+            color: white;
+            
+        }
+
+        
+        label{
+            display: inline-block;
+            height: 100%;
+            margin: 0 20px;
+            line-height: 60px;
+            font-size: 20px;
+            color: rgb(51, 50, 50);
+            cursor: pointer;
+            transition: color .5s;
+            font-weight: bold;
+        }
+        label:hover{
+            color:white;
+
+        }
+        .photo-gallery{
+            width:200%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+       
+        }
+.pic{
+    position:relative;
+    height: 230px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+border-radius: 10px;
+transition: .5s;
+}
+
+#check1:checked ~ .container .photo-gallery .free{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: 0.5s;}
+ #check1:checked ~ .container .photo-gallery .paid
+
+{
+    transform: scale(0);
+    opacity: 0;
+    position:absolute;
+    
+}
+
+#check2:checked ~ .container .photo-gallery .paid{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .container .photo-gallery .free
+{
+    transform: scale(0);
+    opacity: 0;
+    position:absolute;
+}
+
+.content{
+ display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+border-radius: 10px;
+padding: 25px;
+margin: 15px;
+transition: .4s ease;
+
+
+}
+.card:hover{
+transform: scale(1.1);
+}
+
+.info{
+    text-align: center;
+}
+.info h3{
+color: orangered;
+font-size: 1.7em;
+font-weight: 700;
+margin: 10px;
+font-style: italic;
+}
+
+
+
+
+    </style>
+</head>
+</style>
+<body>
+    <input type="radio" name="photos" id="check1" checked>
+    <input type="radio" name="photos" id="check2">
+   
+  
+    <div class="container">
+    
+        <div class="top-content">
+        
+            <label for="check1">free</label>
+            <label for="check2">paid</label>
+         
+
+        </div>
+       
+      
+            <div class="photo-gallery">
+              
+              <div class="pic free">
+                
+                <section class="cards">
+ <div class="content">
+ <div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
+                                       </div>
+ <div class="content">
+<div class="card"><div class="icon"><embed src="2.pdf" type="application/pdf" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div></div>
+                                       </div>
+ <div class="content">
+<div class="card"><div class="icon"><embed src="3.pdf" type="application/pdf" height="300px"/></div><div class="info"><h3> free</h3><p> something</p></div></div>
+                                        </div>
+ <div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
+                                       </div>
+<div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
+                                       </div>
+<div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
+                                       </div>
+ </div>    </section>
+</div>
+          
+                
+                  
+                       
+              
+             
+            <div class="pic paid">
+                <section class="cards">
+                    <div class="content">
+                <div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%"  /></div><div class="info"><h3> free</h3><p> something</p></div>
+            </div>
+                         </div></section>
+               
+
+</div>   
+ 
+</div>
+</body>
+</html>
