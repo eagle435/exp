@@ -8,86 +8,79 @@
      
         /* for android */
 
-        body{
+      body{
             
-            background-repeat: no-repeat;
-      
-            display:flow-root;
-            background-attachment: fixed;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
-        input{
-            display: none;
-        }
-        
-        
- 
+background-repeat: no-repeat;
+display:flow-root;
+background-attachment: fixed;
+          }
+
+        * {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+          }  
+
+     input{
+display: none;
+          }
         
         .top-content{
-            background-color: rgb(238, 233, 233);
-            width:100%;
-            margin: 0 auto 20px auto;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            border-radius: 5px;
-            padding-left: 200px;
-            justify-content: space-between;
-    align-items: center;
+background-color: rgb(238, 233, 233);
+width:100%;
+margin: 0 auto 20px auto;
+height: 60px;
+display: flex;
+align-items: center;
+border-radius: 5px;
+padding-left: 200px;
+justify-content: space-between;
+align-items: center;
 padding-top: 5px;
 padding-left: 300px;
 padding-right: 300px;
+                    }
 
+  .top-content:hover{
+color: white;
+                    }
 
-        }
-        .top-content:hover{
-            color: white;
-            
-        }
-
-        
         label{
-            display: inline-block;
-            height: 100%;
-            margin: 0 20px;
-            line-height: 60px;
-            font-size: 20px;
-            color: rgb(51, 50, 50);
-            cursor: pointer;
-            transition: color .5s;
-            font-weight: bold;
-        }
+display: inline-block;
+height: 100%;
+margin: 0 20px;
+line-height: 60px;
+font-size: 20px;
+color: rgb(51, 50, 50);
+cursor: pointer;
+font-weight: bold;
+transition:  color.3s;
+            }
+
         label:hover{
-            color:white;
+color:white;
+                   }
 
-        }
         .photo-gallery{
-            width:200%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-       
-        }
-.pic{
-    position:relative;
-    height: 230px;
-    border-radius: 10px;
-
-    cursor: pointer;
-
-}
-.pic img{
-    width: 100%;
-    height: 100%;
+width: 100%;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+                      }
+       .pic{
+position:relative;
+height: 230px;
+border-radius: 10px;
+cursor: pointer;
+          }
+      .pic img{
+width: 100%;
+height: 100%;
 border-radius: 10px;
 transition: .5s;
-}
+            }
 
 #check1:checked ~ .container .photo-gallery .free{
     opacity: 1;
@@ -125,22 +118,20 @@ transition: .5s;
     
 }
 .card{
-    background-color: #fff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+background-color: #fff;
+ width: 21.25em;
+box-shadow: 0 5px 25px rgba(1 1 1 /15%);
 border-radius: 10px;
 padding: 25px;
 margin: 15px;
 transition: .4s ease;
-
-
 }
 .card:hover{
 transform: scale(1.1);
 }
 
 .info{
-    text-align: center;
+text-align: center;
 }
 .info h3{
 color: orangered;
@@ -150,35 +141,39 @@ margin: 10px;
 font-style: italic;
 }
 
+.main-btn{
+width: 100%;
+height: 300px;
+border: black solid 1px;
+border-radius: 10px;
+display: inline-block;
+background-image: url("i1.jpg");
+background-size: cover;
+}
 
-
-
-    </style>
-</head>
 </style>
+
+</head>
+
 <body>
     <input type="radio" name="photos" id="check1" checked>
     <input type="radio" name="photos" id="check2">
-   
-  
     <div class="container">
-    
-        <div class="top-content">
+    <div class="top-content">
         
             <label for="check1">free</label>
             <label for="check2">paid</label>
          
 
-        </div>
-       
+    </div>
+    
       
             <div class="photo-gallery">
-              
-              <div class="pic free">
+            <div class="pic free">
                 
                 <section class="cards">
  <div class="content">
- <div class="card"><div class="icon"><img src="i1.jpg" width="100%" height="300px"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
+ <div class="card"><div class="icon"><a href="https://drive.google.com/file/d/1_AdMPixBIZ0R98hKaHKzquIbroMmLbCG/view?usp=drive_link" class="main-btn"></a></div><div class="info"><h3> free</h3><p> something</p></div>
                                        </div>
  <div class="content">
 <div class="card"><div class="icon"><embed src="2.pdf" type="application/pdf" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div></div>
@@ -192,24 +187,19 @@ font-style: italic;
                                        </div>
 <div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%" height="300px" /></div><div class="info"><h3> free</h3><p> something</p></div>
                                        </div>
- </div>    </section>
+</div>          </section>
 </div>
           
-                
-                  
-                       
-              
-             
             <div class="pic paid">
-                <section class="cards">
-                    <div class="content">
-                <div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%"  /></div><div class="info"><h3> free</h3><p> something</p></div>
-            </div>
-                         </div></section>
+            <section class="cards">
+            <div class="content">
+<div class="card"><div class="icon"><embed src="1.pdf" type="application/pdf" width="100%"  /></div><div class="info"><h3> free</h3><p> something</p></div>
+                                      </div>
+            </div></section>
                
-
+            
 </div>   
- 
 </div>
+    </div>
 </body>
 </html>
